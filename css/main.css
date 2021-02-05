@@ -4,47 +4,35 @@
 .mainSlider{
     position:relative;
 }
-.mainSlider .slick-slide{
-    height:600px;
-    position:relative;
-    overflow:hidden;
+.mainSlider img{
+    width:100%;
+    display:block;
 }
-.mainSlider .slick-slide img{
+
+.sliderBtn{
     position:absolute;
-    left:50%;
-    margin-left:-960px;
 }
-
-/*슬라이더버튼*/
-
-
-/*슬라이더왼쪽버튼*/
-.slick-dots{
-    position:absolute;
-    left:50%;
-    margin-left:-600px;
-    bottom:20px;
+.sliderBtn li{
+    text-indent:-9999px;
 }
-.slick-dots li{float:left;}
-.slick-dots button{
+.sliderBtn li a{}
+
+.sliderLBtn{
+    left:10px;
+    bottom:10px;
+}
+.sliderLBtn li{
     width:16px;
     height:16px;
     background:url(../images/main/blet_visual.png) no-repeat;
-    text-indent:-9999px;
+    float:left;
     margin-right:5px;
-    border:0;
-    font-size:0;
-    cursor:pointer;
-    outline:none;
 }
-.slick-dots .slick-active button{
-    background-position:0 -16px;/*원래는 라이브이미지를써야함*/
+.sliderLBtn li:first-child{
+    background-position:0 -16px;
 }
-/*슬라이더오른쪽버튼*/
 .sliderRBtn{
-    position:absolute;
-    right:50%;
-    margin-right:-600px;
+    right:0;
     bottom:0;
 }
 .sliderRBtn li{
@@ -52,137 +40,131 @@
     width:45px;
     height:45px;
     background:url(../images/main/btn_visual_cnt.png) no-repeat -46px 0;
-    text-indent:-9999px;
     margin-left:1px;
-    cursor:pointer;
 }
-.sliderRBtn .play{
-    background-position:-138px 0;
-}
-.sliderRBtn li:first-child{background-position:0 0;}
-.sliderRBtn li:last-child{background-position:-92px 0;}
 
+.sliderRBtn li:first-child{
+    background-position:0 0;
+}
+.sliderRBtn li:last-child{
+    background-position:-92px 0;
+}
 
 /*메인컨텐츠01*/
-.mainCon01{
-    background:#1C97FE;
-    padding:50px 0;
+.mainCon01{}
+.mainCon01 h2{
+    text-align:center;
+    padding:20px 0;
+}
+.mainCon01 h2 img{
+    width:150px;
+    
 }
 
-.mainCon01 ul{}
-.mainCon01 li{
-    width:273px;
-    margin-right:36px;
-    float:left;
+.con01List{}
+.con01List li{
+    background:url(../images/main/brandSite_img01.jpg) no-repeat center center;
+    background-size:cover;
+    margin-bottom:2px;
+}
+.con01List li:nth-child(2){
+    background-image:url(../images/main/brandSite_img02.jpg);
+}
+.con01List li:last-child{
+    background-image:url(../images/main/brandSite_img03.jpg);
+}
+.con01List li a{
     color:#fff;
-}
-.mainCon01 li:last-child{margin-right:0;}
-.mainCon01 li h3{
-    font-weight:normal;
-    font-size:25px;
-}
-.mainCon01 li a{}
-.mainCon01 li img{
     display:block;
-    margin:10px 0;
-    width:100%;
+    padding:20px;
 }
-.mainCon01 li p{
-    font-size:11px;
-    color:#fff;
+.con01List li h3{
+    font-size:25px;
+    font-weight:normal;
+    padding-top:30%;
 }
+.con01List li p{}
 
 
 /*메인컨텐츠02*/
-.mainCon02{
-    padding:80px 0;
-    background:url(../images/main/brandSite_bg.png) no-repeat center center;
-    background-size:cover;
-    text-align:center;
-}
-.mainCon02 h2{margin-bottom:50px;}
-.mainCon02 h2 img{}
-
-.mainCon02 ul{}
+.mainCon02{}
 .mainCon02 li{
-    width:273px;
-    margin-right:36px;
+    width:calc(50% - 1px);/*가변인 상태에서 픽셀값을 빼주는 방법*/
     float:left;
+    background:#1c97fe;
+    margin-right:2px;
+    margin-bottom:2px;
 }
-.mainCon02 li:last-child{margin-right:0;}
-.mainCon02 li a{}
-.mainCon02 li img{
-    display:block;
-    width:100%;
-}
-.mainCon02 li h4{
-    margin:20px 0;
-}
-.mainCon02 li h4 span{font-size:13px;}
-
-.viewBtn{
-    width:120px;
-    height:35px;
-    line-height:35px;
-    margin:0 auto;
-    background:#263D94;
-    font-size:13px;
-    letter-spacing:2px;
-    border-radius:30px;
-}
-.viewBtn a{
-    display:block;
+.mainCon02 li:nth-child(2n){margin-right:0;}
+.mainCon02 li a{
     color:#fff;
 }
-
-
-/*메인컨텐츠03*/
-.mainCon03{
-    
-}
-.mainCon03 h2{
-    text-align:center;
-    padding-top:50px;
-    padding-bottom:30px;
-}
-.mainCon03 h2 img{}
-
-.con03List{
-    width:376px;
-    margin-right:36px;
-    float:left;
-    box-shadow:0 5px 10px rgba(0,0,0,0.2);
-}
-.con03List:last-child{margin-right:0;}
-.con03List img{
+.mainCon02 li img{
     width:100%;
     display:block;
 }
 
-.con03Info{padding:20px;}
-.con03Info h3{}
-.con03Info p{
-    font-size:13px;
-    margin-bottom:20px;
+.con02Info{
+    padding:15px;
+}
+.con02Info h4{
+    font-size:15px;
+    margin-bottom:15px;
+}
+.con02Info p{
+    font-size:12px;
 }
 
-.con03Info .viewBtn{
-    width:120px;
-    margin:0;
+/*메인컨텐츠03*/
+.mainCon03{}
+.mainCon03 h2{
     text-align:center;
-    background:#1C97FE;
+    padding:20px 0;
+}
+.mainCon03 h2 img{
+    width:180px;
 }
 
+.con03List{
+    overflow:hidden;
+}
+.con03List a{
+    display:flex;/*이미지를 띄웠기때문에 위치를 flex로 안잡아주면 이미지는 보이지않음.*/
+}
+.con03List a>div{
+    width:50%;
+    float:left;
+}
+.mainCon03>div .con03List:nth-child(2n) a{
+    flex-direction:row-reverse;
+}
+/*.con03List:nth-child(2n) a{flex-direction:row-reverse;} 위랑 같은값*/
 
+.con03Img{
+    position:relative;
+}
+.con03Img img{
+    max-width:100%;
+    max-height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;/*absolute로 띄우고, 중앙정렬하는방법*/
+}
 
-
-
-
-
-
-
-
-
+.con03Txt{
+    background:#f1f1f1;
+    padding:20px;
+    box-sizing:border-box;
+}
+.con03Txt h3{}
+.con03Txt p{
+    font-size:11px;
+    margin-top:10px;
+    letter-spacing:1px;
+}
 
 
 
