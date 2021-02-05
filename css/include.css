@@ -1,0 +1,118 @@
+@charset "urf-8";
+
+/*헤더*/
+#header{
+    height:80px;
+    line-height:80px;
+    /*padding:30px 0;*/
+    border-bottom:1px solid #e5e5e5;
+    margin-bottom:30px;
+}
+#header h1{
+    float:left;
+}
+#header h1 a{}
+#header h1 img{
+    /*display:block;/*공백없애기*/
+}
+
+.gnb{
+    float:left;
+    margin-left:80px;
+}
+.gnb li{
+    float:left;
+    margin-right:30px;
+}
+.gnb li a{}
+
+/*서브메뉴*/
+.lnb{
+    position:absolute;
+    line-height:30px;
+    font-size:13px;
+    display:none;
+}
+.gnb li:hover .lnb{display:block;}
+.lnb li{}
+.lnb li:hover a{
+    color:#007cc0;
+    font-weight:bold;
+}
+
+.langList{
+    float:right;
+    font-size:13px;
+}
+.langList li{
+    float:left;
+    margin-left:15px;
+}
+.langList li a{}
+.langOn a{
+    color:#007cc0;
+    font-weight:bold;
+}
+
+
+/*푸터*/
+#footer{
+    border-top:1px solid #E7E7E7;
+    padding:30px 0;
+    margin-top:50px;
+    
+}
+#footer .inner{
+    position:relative;
+}
+
+.fLogo{
+    float:left;
+    height:67.5px;
+    line-height:67.5px;/*margin-top:25px줘도됨*/
+}
+.fLogo img{
+    text-align:center;
+}
+
+.fInfo{
+    float:left;
+    font-size:11px;
+    margin-left:30px;
+    color:#B9B9B9;
+}
+.fMenu{
+    
+}
+.fMenu li{
+    float:left;
+    padding-bottom:10px;
+}
+.fMenu li::after{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:9px;
+    background:#B9B9B9;
+    margin:0 8px 0 3px;
+}
+.fMenu li:last-child::after{display:none;}
+.fMenu li a{
+    color:#B9B9B9;
+}
+.fInfo p{
+    
+}
+
+.fMark{
+    position:absolute;
+    right:0;
+}
+.fMark a{}
+.fMark a img{}
+
+
+
+
+
+
