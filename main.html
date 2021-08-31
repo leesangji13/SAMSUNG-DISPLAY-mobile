@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>main</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="./css/setup.css">
+    <link rel="stylesheet" href="./css/include.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="./css/jquery.js"></script>
+    <style>
+        
+        .total{
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            padding: 50px 0;
+        }
+        .total p{
+            font-size: 17px;
+        }
+        .total h3{
+            font-size: 40px;
+        }
+        .total h3 span{
+            font-size: 40px;
+            color: #3E10C3;
+        }
+        h2{
+            font-size: 15px;
+            text-align: left;
+            margin: 15px 0;
+        }
+        .mining a{
+            width: 100%;
+            padding: 20px 15px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            border-radius: 10px;
+            background-color: #f1f1f1;
+        }
+        .mining a:last-child{
+            margin-right: 0;
+        }
+        
+        .mining p{
+            font-size: 13px;
+        }
+        .mining span{
+            font-size: 13px;
+        }
+        .mining .span{
+            font-size: 11px;
+            color: #818181;
+            text-align: left;
+        }
+        .wallet{
+            padding: 20px 15px;
+            border-radius: 10px;
+            background-color: #f1f1f1;
+        }
+        .wallet img{
+            width: auto;
+            height: 40px;
+            vertical-align: middle;
+        }
+        .wallet .line::before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            margin: 10px 0;
+        }
+        .wallet .left{
+            text-align: left;
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+        .wallet .right{
+            text-align: right;
+        }
+        .wallet .right h4 span{
+            color: #3E10C3;
+        }
+        @media only screen and (min-width:100px) and (max-width:400px){
+            .mining .flex_1{
+                flex-direction: column;
+            }
+            .wallet img{
+                height: 35px;
+            }
+            .wallet .right h4, .wallet .right h4 span, .wallet p{
+                font-size: 13px;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:330px){
+            .wrap{
+                padding: 0 30px;
+            }
+            .total h3, .total h3 span{
+                font-size: 34px;
+            }
+            .mining span, .mining p{
+                font-size: 12px;
+            }
+            .wallet img{
+                height: 30px;
+            }
+            .wallet .right h4, .wallet .right h4 span, .wallet p{
+                font-size: 12px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <div class="flex">
+                <div class="name">Hello, Jenny</div>
+                <i class="fas user fa-user-circle"></i>
+                <i class="fas bar fa-bars"></i>
+            </div>
+            <span class="line"></span>
+            <nav class="menu">
+                <div class="menuBox">
+                    <div class="home">
+                        <a href="#"><img class="img" src="./img/home_ico.png" alt="">메인</a>
+                    </div>
+                    <ul>
+                        <li><a href="#"><img src="./img/menuIco_01.png" alt="">상품 구매</a></li>
+                        <li><a href="#"><img src="./img/menuIco_02.png" alt="">내 정보</a></li>
+                        <li><a href="#"><img src="./img/menuIco_03.png" alt="">공지사항</a></li>
+                        <li><a href="#"><img src="./img/menuIco_05.png" alt="">앱 정보</a></li>
+                        <li><a href="#"><img src="./img/menuIco_04.png" alt="">관리자</a></li>
+                    </ul>
+                    <div class="close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="#" class="logout"><i class="fas off fa-power-off"></i>로그아웃</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="total">
+                <p>Total Balance</p>
+                <h3>0.00 <span>USD</span></h3>
+            </div>
+            <h2>나의 투자</h2>
+            <div class="mining">
+                <div class="flex">
+                    <a href="#">
+                        <div class="flex flex_1">
+                            <p>전체 투자</p>
+                            <span>0.00 USD</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex flex_1">
+                            <p>오늘 수익</p>
+                            <span>0.00 USD</span>
+                        </div>
+                    </a>
+                </div>
+                <a href="#">
+                    <div class="flex">
+                        <p>누적 투자 수익</p>
+                        <span>0.00</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="flex">
+                        <p>누적 상품 투자 수익</p>
+                        <span>0.00</span>
+                    </div>
+                 </a>
+                <span class="span">매일 24:00 에 투자 데이터가 업데이트 됩니다.</span>
+            </div>
+            <h2>나의 주식현황</h2>
+            <div class="wallet">
+                <div class="flex">
+                   <a href="#">
+                       <img src="./img/bitcoin.png" alt="">
+                        <div class="left">
+                            <p>비트코인</p>
+                            <p>BTC</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="right">
+                            <p>0.00</p>
+                            <h4>= 000.00 <span>USD</span></h4>
+                        </div>
+                    </a>
+                </div>
+                <span class="line"></span>
+                <div class="flex">
+                   <a href="#">
+                       <img src="./img/filcoin.png" alt="">
+                        <div class="left">
+                            <p>파일코인</p>
+                            <p>FIL</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="right">
+                            <p>0.00</p>
+                            <h4>= 000.00 <span>USD</span></h4>
+                        </div>
+                    </a>
+                </div>
+                <span class="line"></span>
+                <div class="flex">
+                   <a href="#">
+                       <img src="./img/troncoin.png" alt="">
+                        <div class="left">
+                            <p>트론코인</p>
+                            <p>BTC</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="right">
+                            <p>0.00</p>
+                            <h4>= 000.00 <span>USD</span></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script>
+    $(function(){
+        $("header .bar").on("click",function(){
+            $("header .menu").toggleClass("view");   
+        });
+        $("header .menuBox .close span").on("click",function(){
+            $("header .menu").removeClass("view");   
+        });
+    });
+</script>
+</html>

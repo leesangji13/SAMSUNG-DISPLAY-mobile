@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    vertical-align: top;
+    outline: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto:wght@500&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Nanum Gothic', sans-serif;*/
+/*font-family: 'Noto Sans KR', sans-serif;*/
+main{
+    padding-bottom: 35px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+@font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/materialicons/v92/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+}
+
+body{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+ul, ol{
+    list-style: none;
+    font-size: 0px;
+}
+
+ul li, ol li{
+    display: inline-block;
+}
+
+a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+.wrap{
+    display: inline-block;
+    width: 1200px;
+}
+
+.pc{
+    display: block !important;
+}
+
+.mobile{
+    display: none !important;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+table, th, td{
+    border: 0;
+}
+
+@media only screen and (min-width:100px) and (max-width:1200px){
+    .wrap{
+        width: 100%;
+        padding: 0px 35px;
+    }
+    
+    .pc{
+        display: none !important;
+    }
+    
+    .mobile{
+        display: inline-block !important;
+    }
+    
+}
+
+@media only screen and (min-width:100px) and (max-width:1000px){
+    
+}
+
+@media only screen and (min-width:100px) and (max-width:800px){
+    
+}
+
+@media only screen and (min-width:100px) and (max-width:600px){
+    
+}
+
+
+
+

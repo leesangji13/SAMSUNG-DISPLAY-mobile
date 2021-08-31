@@ -1,92 +1,174 @@
-@charset "utf-8";
-
-/*헤더*/
-#header{}
-
-.hTop{
-    height:40px;
-    background:url(../images/common/bg_top.gif);
+header{
+    padding: 20px 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
-.hTop h1{
-    width:120px;
+header td{
+    border-spacing: 30px; 
 }
-.hTop h1 a{
-    
+header .name, header .name_1{
+    width: 33.33%;
+    font-size: 17px;
+    text-align: left;
 }
-.hTop h1 img{
-    width:100%;
-    vertical-align:top;
-    padding-top:10px;
-    padding-left:10px;
+header .name_1{text-align: center;}
+header .material-icons{
+    width: 33.33%;
+    text-align: left;
 }
-
-.panel{
-    width:40px;
-    height:40px;
-    background:#10509d;
-    position:absolute;
-    right:0;
-    top:0;
+header .material-icons-round{text-align: right;}
+header .user{
+    width: 33.33%;
+    font-size: 25px;
 }
-.panel a{
-    display:block;
-    padding:12px 0;
+header .bar{
+    width: 33.33%;
+    font-size: 17px;
+    text-align: right;
+    cursor: pointer;
 }
-.panel a::before,.panel span,.panel a::after{
-    content:"";
-    display:block;
-    width:20px;
-    height:2px;
-    background:#fff;
-    margin:0 auto;
+header .line::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 15px 0;
 }
-.panel span{
-    margin:5px auto;
-    text-indent:-9999px;
+header .menu .menuBox{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #414141;
+    z-index: 999;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity .5s 0s, transform 0s .5s;
 }
-
-.gnb{
-    background:url(../images/common/bg_gnb.gif);
-    height:29px;
-    font-size:11px;
+header .menu.view .menuBox{
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity .5s 0s, transform 0s 0s;
 }
-.gnb li{
-    width:20%;
-    line-height:29px;
-    float:left;
-    text-align:center;
-    border-right:1px solid #363636;
-    border-left:1px solid #595959;
-    box-sizing:border-box;
+header .menuBox ul{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    transform: translateY(-30%);
 }
-.gnb li:first-child{border-left:0;}
-.gnb li:last-child{border-right:0;}
-.gnb li a{
-    color:#c5c5c5;
+header .menuBox ul li{
+    width: 100%;
+    display: block;
+    text-align: left;
 }
-
-/*푸터*/
-#footer{
-    background:url(../images/common/bg_footer_new.gif);
-    color:#fff;
-    font-size:10px;
-    letter-spacing:-1px;
-    text-align:center;
-    padding:10px 0;
+header .menuBox ul li::before, header .menuBox ul li:last-child::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #818181;
 }
-
-#footer p{}
-.fBtn{}
-.fBtn div{
-    display:inline-block;
-    border:1px solid #fff;
-    border-radius:2px;
-    margin:0 10px;
-    margin-top:10px;
+header .menuBox ul li a{
+    width: 100%;
+    padding: 25px 20px;
+    font-size: 17px;
+    color: white;
 }
-.fBtn a{
-    color:#fff;
-    display:block;
-    padding:5px 10px;
+header .menuBox .close span{
+    position: absolute;
+    top: 34px;
+    right: 21px;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    cursor: pointer;
 }
-
+header .menu .menuBox .close span:first-child{
+    transform: translate(-50%,-50%) rotate(45deg);
+    width: 20px;
+}
+header .menu .menuBox .close span:last-child{
+    transform: translate(-50%,-50%) rotate(-45deg);
+    width: 20px;
+}
+header .menu.view .menuBox .close span:first-child{
+    z-index: 1000;
+}
+header .menu.view .menuBox .close span:last-child{
+    z-index: 1000;
+}
+header .menuBox .home a{
+    color: white;
+    font-size: 17px;
+    position: absolute;
+    left: 20px;
+    top: 21px;
+    vertical-align: middle;
+}
+header .menuBox .img{
+    width: auto;
+    height: 27px;
+    vertical-align: middle;
+}
+header .menuBox img{
+    width: auto;
+    height: 30px;
+    margin-right: 20px;
+}
+header .menuBox .logout{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 17px;
+}
+header .menuBox .logout .off{
+    font-size: 17px;
+    vertical-align: baseline;
+    padding-right: 10px;
+}
+@media only screen and (min-width:100px) and (max-width:400px){
+    header .name, header .name_1{
+        font-size: 16px;
+    }
+    header .name_1{
+        width: 42%;
+    }
+    header .menu .menuBox{
+        width: 100%;
+    }
+    header .menuBox ul li a{
+        padding: 19px 20px;
+    }
+    header .menuBox .home a, header .menuBox ul li a, header .menuBox .logout, header .menuBox .logout .off{
+        font-size: 15px;
+    }
+    header .menuBox .img{
+        height: 25px;
+    }
+    header .menuBox img{
+        height: 28px;
+    }
+}
+@media only screen and (min-width:100px) and (max-width:330px){
+    header .name{
+        font-size: 14px;
+    }
+    header .bar{
+        font-size: 16px;
+    }
+    header .user{
+        font-size: 23px;
+    }
+    header .menuBox img{
+        height: 25px;
+    }
+    header .menuBox .img{
+        height: 23px;
+    }
+    header .menuBox .home a, header .menuBox ul li a, header .menuBox .logout, header .menuBox .logout .off{
+        font-size: 14px;
+    }
+}

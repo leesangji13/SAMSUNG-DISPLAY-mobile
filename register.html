@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>register</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="./css/setup.css">
+    <link rel="stylesheet" href="./css/include.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="./css/jquery.js"></script>
+    <style>
+        header .wrap{
+            position: relative;
+        }
+        header .material-icons{
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            color: black;
+        }
+        header h1{
+            font-size: 30px;
+            margin: 0;
+        }
+        main{
+            padding-top: 35px;
+        }
+        .total{
+            border: 1px solid #515151;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+        p, .label{
+            text-align: left;
+        }
+        input{
+            margin-bottom: 8px;
+        }
+        button{
+            width: 90%;
+            outline: 0;
+            border: 0;
+            border-radius: 20px;
+            padding: 10px 17px;
+            font-weight: 300;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #515151;
+            color: white;
+        }
+        .button{
+            width: 50%;
+            background-color: #515151;
+            font-size: 18px;
+            color: white;
+            font-weight: 200;
+        }
+        .button:disabled{
+            background-color: #919191;
+            cursor: auto;
+        }
+        main .input_eye{
+            position: relative;
+        }
+        main .input_eye .eye{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 25px;
+        }
+        main .input_eye{
+            position: relative;
+        }
+        main .input_eye .fa{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 25px;
+        }
+        /*.button:hover{
+            background-color: black;
+        }*/
+        @media only screen and (min-width:100px) and (max-width:1200px){
+            .wrap{
+                padding: 0 30px;
+            }
+            .material-icons{
+                margin-left: 15px;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:600px){
+            .w3-threequarter{
+                width: 74.99999%;
+            }
+            .w3-quarter{
+                width: 24.99999%;
+            }
+            button{
+                font-size: 12px;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:500px){
+            .w3-threequarter{
+                width: 70%;
+            }
+            .w3-quarter{
+                width: 30%;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:400px){
+            .w3-threequarter{
+                width: 64.99999%;
+            }
+            .w3-quarter{
+                width: 34.99999%;
+            }
+            button{
+                font-size: 11px;
+            }
+            input{
+                font-size: 12px;
+            }
+            label{
+                font-size: 13px;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:330px){
+            .w3-threequarter{
+                width: 60%;
+            }
+            .w3-quarter{
+                width: 40%;
+            }
+            input{
+                font-size: 11px;
+            }
+            .total{
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <div class="wrap">
+           <div class="material-icons">
+              <a href="#"><span class="material-icons-outlined material-icons arrow">arrow_back_ios</span></a>
+            </div>   
+            <h1>Register</h1>
+       </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="total">
+                 <div class="label"><label>아이디</label></div>
+                  <div class="w3-row">
+                     <div class="w3-threequarter">
+                          <p>
+                          <input class="w3-input" type="text" maxlength="10" placeholder="숫자,영문 조합 6자리 이상"></p>
+                     </div>
+                      <div class="w3-quarter">
+                          <button>중복확인</button>
+                      </div>
+                  </div>
+                  <p>
+                  <label>비밀번호</label>
+                  <div class="input_eye">
+                  <input class="w3-input" type="password" placeholder="숫자,영문 조합 6자리 이상" maxlength="10">
+                  <i class="fa eye fa-eye-slash fa-lg"></i>
+                  </div>
+                  </p>
+                  <p>
+                  <label>비밀번호 확인</label>
+                  <div class="input_eye">
+                  <input class="w3-input" type="password" placeholder="숫자,영문 조합 6자리 이상" maxlength="10">
+                  <i class="fa eye fa-eye-slash fa-lg"></i>
+                  </div>
+                  </p>
+                  <div class="label"><label>Email</label></div>
+                  <div class="w3-row">
+                     <div class="w3-threequarter">
+                          <p>
+                          <input class="w3-input" type="text" placeholder="E-MAIL"></p>
+                     </div>
+                      <div class="w3-quarter">
+                          <button>인증</button>
+                      </div>
+                  </div>
+                  <div class="label"><label>인증코드</label></div>
+                  <div class="w3-row">
+                     <div class="w3-threequarter">
+                          <p>
+                          <input class="w3-input" type="text" maxlength="6" placeholder="인증코드 6자리"></p>
+                     </div>
+                      <div class="w3-quarter">
+                          <button>확인</button>
+                      </div>
+                  </div>
+                  <p>
+                  <label>전화번호</label>
+                  <input class="w3-input" type="text" maxlength="11" placeholder="'-'없이 입력"></p>
+                  <p>
+                  <label>투자 비밀번호</label>
+                  <input class="w3-input" type="password" maxlength="6" placeholder="숫자 6자리 입력"></p>
+                  <p>
+                  <label>투자 비밀번호 확인</label>
+                  <input class="w3-input" type="password" maxlength="6" placeholder="숫자 6자리 입력"></p>
+                  <div class="label"><label>투자 코드</label></div>
+                  <div class="w3-row">
+                     <div class="w3-threequarter">
+                          <p>
+                          <input class="w3-input" type="text" maxlength="10"></p>
+                     </div>
+                      <div class="w3-quarter">
+                          <button>확인</button>
+                      </div>
+                  </div>
+            </div>
+            <button class="button" disabled>회원가입</button>
+        </div>
+    </main>
+</body>
+<script>
+    $(document).ready(function(){
+        $('main .input_eye .eye').on('click',function(){
+            $('input').toggleClass('active');
+            if($('input').hasClass('active')){
+                $(this).attr('class',"fa fa-eye fa-lg")
+                .prev('input').attr('type',"text");
+            }else{
+                $(this).attr('class',"fa fa-eye-slash fa-lg")
+                .prev('input').attr('type','password');
+            }
+        });
+    });
+</script>
+</html>

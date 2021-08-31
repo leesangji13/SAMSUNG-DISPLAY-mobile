@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>mydetails</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="./css/setup.css">
+    <link rel="stylesheet" href="./css/include.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="./css/jquery.js"></script>
+    <style>
+        main{
+            padding-top: 35px;
+        }
+        .total{
+            border-radius: 20px;
+            border: 1px solid #d1d1d1;
+        }
+        .tap{
+            display: grid;
+            grid-template-columns: 250px 1fr;
+        }
+        .menu{
+            border-right: 1px solid #d1d1d1;
+            background-color: #f5f5f5;
+            border-radius: 20px 0 0 20px;
+        }
+        .menu li{
+            width: 100%;
+            line-height: 50px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 300;
+            border-bottom: 1px solid #d1d1d1;
+            display: block;
+        }
+        .menu li:first-child{
+            border-radius: 20px 0 0 0;
+        }
+        .menu li.view{
+            background-color: #C0E8D5;
+            color: white;
+        }
+        .content{
+            padding: 60px 30px;
+        }
+        .content li{
+            width: 100%;
+            max-height: 0px;
+            text-align: left;
+            overflow: hidden;
+            opacity: 0;
+        }
+        .content li:first-child::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #BFBFBF;
+            margin: 20px 0;
+        }
+        .content li.view{
+            max-height: 1000px;
+            opacity: 1;
+            transition: opacity 1s;
+        }
+        .content li .w3-input{
+            padding: 13px 20px;
+            margin-bottom: 10px;
+        }
+        .content li:first-child .w3-input{
+            border-bottom: 0;
+        }
+        .w3-border{
+            border-radius: 20px;
+            margin: 10px 0;
+        }
+        h2{
+            font-size: 25px;
+            font-weight: 500;
+        }
+        h2::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #BFBFBF;
+            margin: 30px 0;
+        }
+        input:disabled{
+            background-color: white;
+        }
+        button{
+            width: 100%;
+            border-radius: 20px;
+            background-color: #515151;
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+            outline: 0;
+            border: 0;
+            font-weight: 200;
+            padding: 10px 17px;
+            margin-top: 5px;
+        }
+        button:disabled{
+            background-color: #919191;
+            cursor: auto;
+        }
+        .w3-threequarter{
+            width: 85%;
+        }
+        .w3-quarter{
+            width: 15%;
+        }
+        .button{
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        @media only screen and (min-width:100px) and (max-width:1000px){
+            .w3-threequarter{
+                width: 80%;
+            }
+            .w3-quarter{
+                width: 20%;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:800px){
+            .tap{
+                grid-template-columns: 140px 1fr;
+            }
+            .w3-threequarter{
+                width: 60%;
+            }
+            .w3-quarter{
+                width: 40%;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:600px){
+            input{
+                font-size: 13px;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:440px){
+            .tap{
+                display: inline-block;
+            }
+            .menu{
+                border-radius: 20px 20px 0 0;
+                border-right: 0;
+            }
+            .menu li{
+                width: 33.33%;
+                font-size: 13px;
+                display: inline-block;
+                border-right: 1px solid #d1d1d1;
+            }
+            .menu li:last-child{
+                border-radius: 0 20px 0 0;
+                border-right: 0;;
+            }
+            h2{
+                font-size: 18px;
+            }
+            label{
+                font-size: 13px;
+            }
+            input, button{
+                font-size: 13px;
+            }
+            .w3-threequarter{
+                width: 60%;
+            }
+            .w3-quarter{
+                width: 40%;
+            }
+            .content{
+                padding: 50px 30px;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:330px){
+            .wrap{
+                padding: 0 25px;
+            }
+            input, button{
+                font-size: 12px;
+            }
+            .menu li{
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <div class="flex">
+                 <div class="material-icons">
+                      <a href="#"><span class="material-icons-outlined material-icons">arrow_back_ios</span></a>
+                  </div>
+                <div class="name_1">내 정보</div>
+                <i class="fas bar fa-bars"></i>
+            </div>
+            <nav class="menu">
+                <div class="menuBox">
+                    <div class="home">
+                        <a href="#"><img class="img" src="./img/home_ico.png" alt="">메인</a>
+                    </div>
+                    <ul>
+                        <li><a href="#"><img src="./img/menuIco_01.png" alt="">상품 구매</a></li>
+                        <li><a href="#"><img src="./img/menuIco_02.png" alt="">내 정보</a></li>
+                        <li><a href="#"><img src="./img/menuIco_03.png" alt="">공지사항</a></li>
+                        <li><a href="#"><img src="./img/menuIco_05.png" alt="">앱 정보</a></li>
+                        <li><a href="#"><img src="./img/menuIco_04.png" alt="">관리자</a></li>
+                    </ul>
+                    <div class="close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="#" class="logout"><i class="fas off fa-power-off"></i>로그아웃</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="total">
+                <div class="tap">
+                   <ul class="menu">
+                       <li class="view">기본 정보</li>
+                       <li>비밀번호 변경</li>
+                       <li>전화번호 변경</li>
+                   </ul>
+                   <ul class="content">
+                       <li class="view">
+                            <h2>기본 정보</h2>
+                            <div class="label"><label>아이디</label>
+                            <input class="w3-input" type="text" disabled placeholder="아이디">
+                            <div class="label"><label>가입일</label>
+                            <input class="w3-input" type="text" disabled placeholder="2021.06.28">
+                            <div class="label"><label>이메일</label>
+                            <input class="w3-input" type="text" disabled placeholder="E-Mail@mail.com">
+                            <div class="label"><label>전화번호</label>
+                            <input class="w3-input" type="text" disabled placeholder="010-1234-5678">
+                       </li>
+                       <li>
+                           <h2>비밀번호 변경</h2>
+                           <div class="label"><label>기존 비밀번호</label>
+                           <input class="w3-input w3-border" type="password" placeholder="기존 비밀번호를 입력해주세요." maxlength="10">
+                           <div class="label"><label>새로운 비밀번호</label>
+                           <input class="w3-input" type="password" placeholder="8~22자 영문,숫자,특수문자 혼합" maxlength="22">
+                           <div class="label"><label>새로운 비밀번호 재입력</label>
+                           <input class="w3-input" type="password" placeholder="새로운 비밀번호 재입력" maxlength="22">
+                           <div class="label"><label>이메일</label>
+                           <input class="w3-input" type="text" placeholder="E-MAIL">
+                           <div class="label"><label>인증코드</label>
+                           <div class="w3-row">
+                             <div class="w3-threequarter">
+                                  <p>
+                                  <input class="w3-input" type="text" placeholder="인증코드"></p>
+                             </div>
+                              <div class="w3-quarter">
+                                  <button>인증</button>
+                              </div>
+                          </div>
+                          <button class="button" disabled>확인</button>
+                       </li>
+                       <li>
+                           <h2>전화번호 변경</h2>
+                           <div class="label"><label>전화번호</label>
+                           <input class="w3-input" type="text" placeholder="새로운 전화번호를 입력해주세요.">
+                           <div class="label"><label>이메일</label>
+                            <input class="w3-input" type="text" placeholder="E-MAIL">
+                            <div class="label"><label>인증코드</label>
+                            <div class="w3-row">
+                              <div class="w3-threequarter">
+                                   <p>
+                                   <input class="w3-input" type="text" placeholder="인증코드"></p>
+                              </div>
+                               <div class="w3-quarter">
+                                   <button>인증</button>
+                               </div>
+                           </div>
+                           <button class="button" disabled>확인</button>
+                       </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    $(function(){
+        $("header .bar").on("click",function(){
+            $("header .menu").toggleClass("view");   
+        });
+        $("header .menuBox .close span").on("click",function(){
+            $("header .menu").removeClass("view");   
+        });
+        $(".tap .menu > li").on("click",function(){
+            const index = $(this).index();
+            
+            $(".tap .menu > li").removeClass("view");
+            $(".tap .content > li").removeClass("view");
+            
+            
+            $(this).addClass("view");
+            $(".tap .content > li").eq(index).addClass("view");
+            
+        });
+    });
+</script>
+</html>
